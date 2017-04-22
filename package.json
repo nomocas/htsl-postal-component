@@ -1,0 +1,51 @@
+{
+  "name": "babelute-html-postal-component",
+  "version": "0.1.0",
+  "description": "loose coupled postaljs-binded Component for babelute-html",
+  "scripts": {
+    "prebuild": "eslint src test",
+    "build": "npm run es5-build",
+    "es5-build": "babel src -d dist/es5",
+    "es5-watch": "babel src -d dist/es5 -w",
+    "pretest": "npm run build",
+    "test": "mocha",
+    "cover": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test/*.js",
+    "prepublish": "npm test"
+  },
+
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+
+  "keywords":[
+    "postaljs",
+    "babelute-html",
+    "component"
+  ],
+  
+  "author": "Gilles Coomans",
+  "license": "MIT",
+  "dependencies": {
+    "babelute-html-lexicon": "*",
+    "postal": "^2.0.5"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "babel-cli": "^6.14.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-istanbul": "^2.0.2",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "babelrc-rollup": "^3.0.0",
+    "chai": "^3.5.0",
+    "cross-env": "^2.0.1",
+    "eslint": "^3.15.0",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.2.0",
+    "nyc": "^8.1.0"
+  }
+}
