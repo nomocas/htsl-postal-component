@@ -52,7 +52,7 @@ differ.difActions.postalComponent = function($tag, lexem, olexem) {
 };
 
 differ.removeActions.postalComponent = function($tag, lexem) {
-	lexem.instance.unmount();
+	lexem.instance.hide ? lexem.instance.hide() : lexem.instance.unmount();
 	// $tag.removeChild(lexem.instance.witness); // done by differ.remove()
 	lexem.instance.showUnsubscribe.unsubscribe();
 	lexem.instance.hideUnsubscribe.unsubscribe();
@@ -99,7 +99,7 @@ function linkPostal($tag, channel, lexem, instance) {
 		topic: 'hide',
 		callback: () => {
 			if (instance.developed)
-				instance.unmount();
+				instance.hide ? instance.hide() : instance.unmount();
 		}
 	});
 	// toggle
@@ -108,7 +108,7 @@ function linkPostal($tag, channel, lexem, instance) {
 		topic: 'toggle',
 		callback: (data) => {
 			if (instance.developed)
-				instance.unmount();
+				instance.hide ? instance.hide() : instance.unmount();
 			else
 				mountComponent($tag, instance, lexem.witness, data);
 		}
@@ -118,3 +118,4 @@ function linkPostal($tag, channel, lexem, instance) {
 module.exports = function injectPostal(p) {
 	postal = p;
 };
+
