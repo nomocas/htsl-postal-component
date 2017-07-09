@@ -2,6 +2,7 @@
   "name": "htsl-postal-component",
   "version": "0.2.0",
   "description": "loose coupled postaljs-binded Component for htsl",
+  "main": "dist/index.js",
   "scripts": {
     "prebuild": "eslint src test",
     "build": "babel src -d dist",
