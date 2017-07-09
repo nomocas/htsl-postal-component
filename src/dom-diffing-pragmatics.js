@@ -3,14 +3,13 @@
  */
 /* global */
 
-import differ from 'babelute-html-dom-diffing-pragmatics';
-import htmlLexicon from 'babelute-html-lexicon';
+import postal from 'postal';
+import differ from 'htsl-dom-diffing-pragmatics';
+import htmlLexicon from 'htsl-lexicon';
 
 htmlLexicon.addAtoms(['postalComponent']);
 
-// lexem : .postalComponent(channel, Component, props)
-
-let postal; // will be injected in final build
+// @usage .postalComponent(channel, Component, props)
 
 differ.renderActions.postalComponent = function($tag, lexem, parent) {
 	const channel = lexem.args[0],
