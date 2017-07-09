@@ -115,7 +115,4 @@ function linkPostal($tag, channel, lexem, instance) {
 	});
 }
 
-module.exports = function injectPostal(p) {
-	postal = p;
-};
 
