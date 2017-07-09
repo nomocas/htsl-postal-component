@@ -1,6 +1,6 @@
-# babelute-html-postal-component
+# htsl-postal-component
 
-Loose coupled postaljs-binded Component for babelute-html.
+Loose coupled postaljs-binded Component for htsl.
 
 
 ## Licence
