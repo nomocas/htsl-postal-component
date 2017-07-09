@@ -1,6 +1,6 @@
 {
   "name": "htsl-postal-component",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "loose coupled postaljs-binded Component for htsl",
   "scripts": {
     "prebuild": "eslint src test",
@@ -18,7 +18,6 @@
     "cmtz": "git-cz",
     "release": "standard-version"
   },
-
   "nyc": {
     "require": [
       "babel-register"
@@ -26,13 +25,11 @@
     "sourceMap": false,
     "instrument": false
   },
-
-  "keywords":[
+  "keywords": [
     "postaljs",
     "htsl",
     "component"
   ],
-  
   "author": "Gilles Coomans",
   "license": "MIT",
   "dependencies": {
