@@ -3,7 +3,7 @@
  */
 /* global */
 
-import postal from 'postal';
+import postal from 'postal/lib/postal.lodash.min';
 import differ from 'htsl-dom-diffing-pragmatics';
 import htmlLexicon from 'htsl-lexicon';
 
